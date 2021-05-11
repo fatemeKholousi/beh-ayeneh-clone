@@ -1,23 +1,70 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import Fscards from "./components/first-set-cards/fscards";
+import FscardsLbl from "./components/first-set-cards/fscardslbl";
+import Navbar from "./components/upside_navbar/navbar";
+import Sscards from "./components/second-set-cards/Sscards";
+// https://www.behinee.com/Business
 function App() {
+  const first_set_cards_label = [
+    "درآمد بیشتر ",
+    " مشتریان جدید",
+    "اسراف کمتر ",
+  ];
+  let first_set_cards_img = [
+    "https://www.behinee.com/image/icon/coins.png",
+    "https://www.behinee.com/image/icon/multipleUsers.png",
+    "https://www.behinee.com/image/icon/leaf.png",
+  ];
+
+  const second_set_cards_label = [
+    "سوپر مارکت",
+    "هتل",
+    "رستوران و کافه",
+    "نانوایی وقنادی ",
+  ];
+  let second_set_cards_img = [
+    "https://www.behinee.com/image/icon/kharobar.png",
+    "https://www.behinee.com/image/icon/hotel.png",
+    "https://www.behinee.com/image/icon/restaurant.png",
+    "https://www.behinee.com/image/icon/bread.png",
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+
+      <span className="container_first">
+        <Fscards img={first_set_cards_img[0]} />
+        <Fscards img={first_set_cards_img[1]} />
+        <Fscards img={first_set_cards_img[2]} />
+      </span>
+      <div className="container_first_txt">
+        <FscardsLbl name={first_set_cards_label[0]} />
+        <FscardsLbl name={first_set_cards_label[1]} />
+        <FscardsLbl name={first_set_cards_label[2]} />
+      </div>
+      <div className="second_section">
+        <h1 className="hamrahan_txt">بهترین همراهان ما</h1>
+
+        <div className="second_set">
+          <Sscards
+            img={second_set_cards_img[0]}
+            lbl={second_set_cards_label[0]}
+          />
+          <Sscards
+            img={second_set_cards_img[1]}
+            lbl={second_set_cards_label[1]}
+          />
+          <Sscards
+            img={second_set_cards_img[2]}
+            lbl={second_set_cards_label[2]}
+          />
+          <Sscards
+            img={second_set_cards_img[3]}
+            lbl={second_set_cards_label[3]}
+          />
+        </div>
+      </div>
     </div>
   );
 }

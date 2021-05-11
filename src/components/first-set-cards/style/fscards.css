@@ -1,0 +1,16 @@
+.container-bg {
+  background-color: rgb(241, 216, 75);
+  border-radius: 150%;
+  width: 11vw;
+  height: 11vw;
+}
+
+.container-bg img {
+  width: 4vw;
+  display: block;
+  margin: auto;
+  padding-top: 3vw;
+}
+
+@media screen {
+}
