@@ -3,10 +3,11 @@ import './sscards.style.css'
 
 const Sscards = (props) => {
     return (
-        <div className="card">
+        <div className="container">
+            <div className="card"> 
         <img src={props.img}/>
-        <h2>{props.lbl}</h2>
-
+        <a href="#"><h2>{props.lbl}</h2></a>
+</div>
         </div>
     )
 }

@@ -1,96 +1,101 @@
-@media only screen and (max-width: 768px) {
-  label {
-    display: block;
-    cursor: pointer;
-  }
-  .nav {
-    background-color: #6b85cf;
-    height: 310px;
-    position: sticky;
-    top: 0;
-  }
-  .menu {
-    text-align: center;
-    width: 100%;
-    display: none;
-  }
-  .menu a {
-    display: block;
-    border-bottom: 1px solid #eaeaeb;
-    margin: 0;
-    color: white;
-    line-height: 30px;
-  }
-  #toggle:checked + .menu {
-    display: block;
-  }
-  .container::before {
-    clear: both;
-    content: " ";
-    display: block;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  border-bottom: 1px solid #e2e8f0;
+  border-top: rgb(57, 145, 57) 2em solid;
+}
+
+.navbar {
   display: flex;
-  justify-content: flex-start;
-  border-top: rgb(18, 165, 30) 1em solid;
-  border-bottom: 0 solid gray;
-
-  -webkit-box-shadow: 0px -1px 15px -6px rgba(116, 116, 116, 0.63);
-  box-shadow: 0px -1px 15px -6px rgba(116, 116, 116, 0.63);
+  justify-content: space-around;
   align-items: center;
-  margin-bottom: 2em;
+  padding: 1rem 1.5rem;
 }
 
-.right_side_links {
-  margin-right: 8vw;
-}
-.right_side_links img {
-  margin-right: auto;
-  margin-left: 2em;
+.hamburger {
+  display: none;
 }
 
-.right_side_links button {
-  background-color: white;
-  border-radius: 5em;
-  position: relative;
-  bottom: 1.5em;
-  margin-left: 1em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  border: white 0.5px solid;
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #666666;
 }
-.btn_link {
-  opacity: 0.6;
-  transition: 0.3s;
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.btn_link:hover {
-  opacity: 1;
-  background-color: yellowgreen;
-  color: white;
-  padding-left: 2em;
-  padding-right: 2em;
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.links {
+  display: flex;
+  margin-left: 25em;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #475569;
 }
 
 #my_shop {
   opacity: 0.6;
   transition: 0.3s;
   color: rgb(255, 255, 255);
-  height: 2vw;
-  background-color: rgb(18, 165, 30);
+  /* height: 2vw; */
+  background-color: rgb(57, 145, 57);
   cursor: pointer;
   outline: none;
   border: none;
   margin-right: auto;
-  margin-left: 3vw;
+  margin-left: 5em;
   border-radius: 4em;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding: 1em 2em;
 }
-
 #my_shop:hover {
   opacity: 1;
   background-color: rgb(249, 196, 51);
   color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-menu:before {
+    content: "\2630";
+    font-size: 5em;
+    position: absolute;
+    left: 1em;
+  }
+  .nav-logo-img {
+    padding-right: 3em;
+  }
+  .nav-item {
+    display: none;
+    justify-content: space-around;
+  }
+  #my_shop {
+    display: none;
+  }
 }

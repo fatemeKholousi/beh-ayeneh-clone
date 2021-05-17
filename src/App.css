@@ -1,9 +1,11 @@
+.container_first {
+  margin-top: 50px;
+}
+
 .container_first,
-.container_first_txt,
 .second_set {
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 .second_set {
   margin-left: 12vw;
@@ -17,4 +19,18 @@
 .second_section {
   background-color: rgb(226, 226, 226);
   margin-bottom: 12vw;
+}
+.container_first {
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+.hamrahan_txt {
+  font-size: 25px;
+  color: rgb(57, 145, 57);
+}
+@media only screen and (max-width: 768px) {
+  .container_first,
+  .second_set {
+    flex-direction: column;
+  }
 }

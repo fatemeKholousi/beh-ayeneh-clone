@@ -34,15 +34,20 @@ function App() {
       <Navbar />
 
       <span className="container_first">
-        <Fscards img={first_set_cards_img[0]} />
-        <Fscards img={first_set_cards_img[1]} />
-        <Fscards img={first_set_cards_img[2]} />
+        <Fscards
+          img={first_set_cards_img[0]}
+          lable={first_set_cards_label[0]}
+        />
+        <Fscards
+          img={first_set_cards_img[1]}
+          lable={first_set_cards_label[1]}
+        />
+        <Fscards
+          img={first_set_cards_img[2]}
+          lable={first_set_cards_label[2]}
+        />
       </span>
-      <div className="container_first_txt">
-        <FscardsLbl name={first_set_cards_label[0]} />
-        <FscardsLbl name={first_set_cards_label[1]} />
-        <FscardsLbl name={first_set_cards_label[2]} />
-      </div>
+
       <div className="second_section">
         <h1 className="hamrahan_txt">بهترین همراهان ما</h1>
 
